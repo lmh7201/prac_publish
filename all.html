@@ -1243,5 +1243,83 @@ a {
                         <option value="fra">불문학과</option>
                         <option value="ger">독문학과</option>
                     </select>
+                    <h4>&lt;optgroup> 태그 - 옵션끼리 묶기</h4>
+                        <li>하나의 select 태그 내에서 여러개의 option 태그를 그룹으로 묶고 label을 지정해 주면 된다.</li>
+                        <li>&lt;optgroup label="그룹이름"></li>
+                        <label class="reg" for="class3">학과3</label>
+                        <select id="class3">
+                            <optgroup label="어문계열">
+                                <option value="kor">국문학과</option>
+                                <option value="eng" selected>영문학과</option>
+                                <option value="chi">중문학과</option>
+                                <option value="jap">일문학과</option>
+                                <option value="fra">불문학과</option>
+                                <option value="ger">독문학과</option>
+                            </optgroup>
+                            <optgroup label="이공계열">
+                                <option value="archi">건축공학과</option>
+                                <option value="mecha">기계공학과</option>
+                                <option value="indus">산업공학과</option>
+                                <option value="elect">전기전자공학과</option>
+                                <option value="compu">컴퓨터공학과</option>
+                                <option value="chemi">화학공학과</option>
+                            </optgroup>
+                        </select>
+                <h3>&lt;datalist> 태그, &lt;option> 태그</h3>
+                    <li>&lt;select> 태그 대신 &lt;datalist> 태그를 사용하면 데이터 목록 중에서 값을 선택하도록 만들 수 있다.</li>
+                    <li>텍스트 필드에 값을 입력하는 것이 아닌 목록에서 제시한 값을 선택하여 입력하는 것</li>
+                    <li>&lt;input> 필드와 사용해야한다. list 속성 값과 데이터 목록의 id값을 같게 만들면 된다.</li>
+                    <li><b>text</b>인 경우에는 대부분의 브라우저에서 지원. 그 외 number, range, color는 브라우저나 버전별로 지원안할 수 있음</li>
+                    <table border="1">
+                        <tr>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>사용자가 레이블을 선택했을 때 서버로 넘겨질 값을 지정</td>
+                        </tr>
+                        <tr>
+                            <td>label</td>
+                            <td>사용자를 위해 브라우저에 표시할 레이블. 따로 지정하지 않으면 value를 레이블로 사용</td>
+                        </tr>
+                    </table>
+                    <input type="text" id="interest" list="choices">
+                    <datalist id="choices">
+                        <option value="grammar" label="문법"></option>
+                        <option value="voca" label="어휘"></option>
+                        <option value="speaking" label="회화"></option>
+                        <option value="listening" label="리스닝"></option>
+                        <option value="news" label="뉴스청취"></option>
+                    </datalist>
+                <h3>&lt;textarea> 태그 - 여러줄 입력하는 텍스트 영역</h3>
+                    <li>직접 여러 줄의 텍스트를 입력하는 영역</li>
+                    <li>예시: 게시판 게시물 입력칸, 회원 가입 시 사용자 약관 표시 등</li>
+                    <table border="1">
+                        <tr>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>다른 폼 요소와 구분하기 위해 텍스트 영역의 이름을 지정</td>
+                        </tr>
+                        <tr>
+                            <td>cols</td>
+                            <td>텍스트 영역의 가로 너비를 문자 단위로 지정</td>
+                        </tr>
+                        <tr>
+                            <td>rows</td>
+                            <td>텍스트 영역의 세로 길이를 줄 단위로 지정. 그 이상 넘어가면 스크롤 막대가 생김</td>
+                        </tr>
+                    </table>
+                    <textarea name="test_textarea" cols="60" rows="3">
+우리 집에는 유림이라는 노르웨이숲 고양이가 있어요.
+올해 7월에 귀여운 새끼들을 낳았습니다.
+새끼들은 총 9마리를 낳았는데, 한마리는 낳고 바로 무지개다리를 건넜습니다
+다른 새끼들 8마리는 무럭무럭 자라고 있어요
+띨이, 빵이, 맹이, 레온이, 니거, 시츄, 야누스, 백반이에요
+이중에서 두마리만 키워요
+                    </textarea>
     </body>
 </html>
