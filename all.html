@@ -1321,5 +1321,65 @@ a {
 띨이, 빵이, 맹이, 레온이, 니거, 시츄, 야누스, 백반이에요
 이중에서 두마리만 키워요
                     </textarea>
+            <h2>04-05. 기타 다양한 폼 요소들</h2>
+                <h3>&lt;button>태그 - 버튼넣기</h3>
+                    <li>type 속성으로 버튼이 활성화 되었을 때 어떤 동작을 할 지 지정한다. 기본은 submit</li>
+                    <table border="1">
+                        <tr>
+                            <th>속성 값</th>
+                            <th>설명</th>
+                        </tr>
+                        <tr>
+                            <td>submit</td>
+                            <td>폼을 서버로 전송한다. &lt;button type="submit">전송하기&lt;/button>과 같이 사용</td>
+                        </tr>
+                        <tr>
+                            <td>reset</td>
+                            <td>폼에 입력한 모든 내용을 초기화한다. &lt;button type="reset">다시쓰기&lt;/button>과 같이 사용</td>
+                        </tr>
+                        <tr>
+                            <td>button</td>
+                            <td>버튼 형태만 만들 뿐 자체 기능은 없다. &lt;button type="button">주소 입력&lt;/button>과 같이 사용</td>
+                        </tr>
+                    </table>
+                    <li>&lt;input>의 type과 형태가 비슷하지만, 태그 이름에서 역할이 분명하여 화면 낭독기로 전달이 가능하다.</li>
+                    <li>콘텐츠도 포함이 가능하여 아이콘을 추가하거나 css로 원하는 형태로 꾸밀 수도 있다.</li>
+                    <li>태그와 css만으로 버튼을 만들면 &lt;input type="image">로 넣을때보다 서버에서 훨씬 빨리 읽어와 표시 가능.</li>
+                    <form>
+                        <button type="submit" class="subm">
+                            <img src="all_imgs/tick.png" alt=""> 전송하기
+                        </button>
+                    </form>
+                <h3>&lt;output> 태그 - 계산 결과</h3>
+                    <li>&lt;output>태그로 묶인 부분이 일반 텍스트가 아닌 계산의 결과값이라는 것을 브라우저에 명시하는 역할</li>
+                    <form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+                        <input type="number" name="num1" value="0">
+                        + <input type="number" name="num2" value="0">
+                        = <output name="result" for="num"></output>
+                    </form>
+                <h3>&lt;progress> 태그 - 진행상황 보여주기</h3>
+                    <li>작업 시작을 0, 최종완료를 max로 하여 얼마나 진척되었는지 숫자로 표현한다. 특별한 단위는 없고 단위를 표시하지도 않는다.</li>
+                    <table border="1">
+                        <tr>
+                            <th>속성</th>
+                            <th>설명</th>
+                        </tr>
+                        <tr>
+                            <td>value</td>
+                            <td>작업 진행 상태를 나타내며 부동 소수점으로 표현. 0보다 크거나 같고 max값보다 작거나 같아야함. max가 지정되지 않았다면 1.0보다 작아야한다</td>
+                        </tr>
+                        <tr>
+                            <td>max</td>
+                            <td>작업이 완료되기 위해 얼마나 많은 작업을 해야하는지 부동 소수점으로 표현한다. 0보다 커야함</td>
+                        </tr>
+                    </table>
+                    <li>
+                        <label>10초 남음</label>
+                        <progress value="50" max="60"></progress>
+                    </li>
+                    <li>
+                        <label>진행률 30%</label>
+                        <progress value="30" max="100"></progress>
+                    </li>
     </body>
 </html>
