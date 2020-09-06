@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>css 전부 모으기</title>
+        <style>
+            p.test1 {color: blue; font-size: 1.em;} /* 태그 선택자 */
+            .accent {font-weight: bold; font-size: 2em; color: red;} /* 클래스 선택자 */
+            #wrapper {width: 300px; padding-block: 10px; border: 1px solid black;} /* id 선택자 */
+
+            ul {
+                color: blue;
+                list-style-type: square;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="#05">05</a></li><br>
+        </ul>
+        <h1 id="05">05. CSS 기초</h1>
+            <div id="wrapper">
+                <h2>표준 웹 기술</h2>
+                <p class="test1"><span class="accent">H</span>TML</p>
+                <p class="test1"><span class="accent">C</span>SS</p>
+                <p class="test1"><span class="accent">J</span>avascript</p>
+            </div>
+            <br>
+            <img src="all_imgs/sydney.png" alt="시드니 오페라 하우스">
+            <ul>
+                <li>시드니(Sydney), 호주</li>
+                <li>리우데자네이루(Rio de Janeiro), 브라질</li>
+                <li>나폴리(Naples), 이탈리아</li>
+            </ul>
+    </body>
+</html>
